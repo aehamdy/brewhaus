@@ -1,8 +1,51 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-brand-primary: #1d4e1a; /* section, header and links bg */
+  --color-brand-primary-muted: #2d5a27; /* header secondary bg and footer bottom bar */
+  --color-brand-secondary: #1d4e1ab3; /* product price, location's address and timings */
+  --color-accent-highlight: #ffecb8;
+  --color-surface-primary: #f9f0d6; /* base background */
+  --color-surface-secondary: #f3ebd1; /* alt background */
+  --color-subtle: rgba(29, 78, 26, 0.12);
+
+  /* Font Sizes */
+  --text-small: 0.875rem; /* 14px | supporting text, captions */
+  --text-base: 1rem; /* 16px | body text */
+  --text-medium: 1.125rem; /* 18px | larger body text, lead text */
+  --text-large: 1.25rem; /* 20px | small headings, emphasized body */
+  --text-xlarge: 2rem; /* 32px | section headings */
+  --text-2xlarge: 3rem; /* 48px | main page titles */
+  --text-3xlarge: 3.5rem; /* 56px | hero headlines */
+  --text-4xlarge: 5rem; /* 80px | display / landing hero */
+
+  /* Spacing */
+  --space-tiny: 0.25rem; /* 4px */
+  --space-2xs: 0.5rem; /* 8px */
+  --space-xs: 0.625rem; /* 10px */
+  --space-sm: 0.75rem; /* 12px */
+  --space-base: 1rem; /* 16px */
+  --space-md: 1.5rem; /* 24px */
+  --space-lg: 2rem; /* 32px */
+  --space-xl: 2.5rem; /* 40px */
+  --space-2xl: 3rem; /* 48px */
+  --space-3xl: 4rem; /* 64px */
+  --space-4xl: 5rem; /* 80px */
+  --space-5xl: 10rem; /* 160px | vertical padding for sections */
+
+  /* Radius */
+  --radius-sm: 0.75rem; /* 12px */
+  --radius-md: 1.25rem; /* 20px */
+  --radius-lg: 1.5rem; /* 24px */
+  --radius-pill: 62.5rem; /* 1000px */
+  --radius-full: 100%; /* circle */
+
+  /* Durations */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 800ms;
+  --duration-slowest: 1200ms;
 }
 
 @theme inline {
