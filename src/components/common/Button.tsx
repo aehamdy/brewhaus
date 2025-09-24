@@ -2,7 +2,7 @@ import Link from "next/link";
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "menu";
   size?: "sm" | "md" | "lg";
   href?: string;
   type?: "link" | "button";
@@ -26,6 +26,7 @@ function Button({
       "text-accent-highlight hover:text-brand-primary active:text-accent-highlight bg-brand-primary hover:bg-accent-highlight active:bg-brand-primary-muted border border-accent-highlight",
     secondary:
       "text-brand-primary hover:text-accent-highlight bg-accent-highlight hover:bg-brand-primary active:bg-brand-primary-muted border border-accent-highlight",
+    menu: "text-brand-primary hover:text-accent-highlight bg-accent-highlight hover:bg-brand-primary active:bg-brand-primary-muted",
   };
   const sizeStyles = {
     sm: "",
