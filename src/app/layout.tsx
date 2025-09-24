@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cabin_Condensed, Calistoga } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/common/Header";
 
 const cabinCondensed = Cabin_Condensed({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${cabinCondensed.variable} ${calistoga.variable} antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
