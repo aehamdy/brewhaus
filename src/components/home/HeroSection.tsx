@@ -1,10 +1,12 @@
 import Button from "@/components/common/Button";
 import SectionTitle from "@/components/common/SectionTitle";
 import { ROUTES } from "@/lib/routes";
+import Image from "next/image";
+import coffeeCupImage from "@/assets/coffee-cup.webp";
 
 function HeroSection() {
   return (
-    <section className="min-h-dvh pt-[184px] bg-brand-primary">
+    <section className="h-dvh md:h-[95dvh] lg:h-[155dvh] space-y-2xl pt-[184px] bg-brand-primary overflow-hidden">
       <div className="flex flex-col justify-center items-center gap-lg px-md">
         <div className="flex flex-col items-center gap-sm text-accent-highlight text-center">
           <SectionTitle variant="hero">
@@ -36,6 +38,32 @@ function HeroSection() {
           >
             Our Locations
           </Button>
+        </div>
+      </div>
+
+      <div className="flex justify-center pt-lg md:pt-[95px] lg:pt-lg md:px-md lg:px-xl overflow-hidden">
+        <div className="hidden md:flex md:max-w-[220px] lg:min-w-[280px] pt-4xl ">
+          <Image
+            src={coffeeCupImage}
+            alt="Coffee Cup"
+            className="w-full h-full object-cover -rotate-8"
+          />
+        </div>
+
+        <div className="max-w-[335px] md:max-w-[300px] lg:min-w-[350px] ">
+          <Image
+            src={coffeeCupImage}
+            alt="Coffee Cup"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        <div className="hidden md:flex md:max-w-[220px] lg:min-w-[280px] pt-4xl ">
+          <Image
+            src={coffeeCupImage}
+            alt="Coffee Cup"
+            className="w-full h-full object-cover rotate-8"
+          />
         </div>
       </div>
     </section>
