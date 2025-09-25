@@ -41,8 +41,8 @@ function HeroSection() {
         </div>
       </div>
 
-      <div className="flex justify-center pt-lg md:pt-[95px] lg:pt-lg md:px-md lg:px-xl overflow-hidden">
-        <div className="hidden md:flex md:max-w-[220px] lg:min-w-[280px] pt-4xl ">
+      <div className="flex justify-center pt-lg md:pt-[95px] lg:pt-sm md:px-md lg:px-xl overflow-hidden">
+        <div className="hidden md:flex md:max-w-[220px] lg:max-w-[346px] pt-4xl ">
           <Image
             src={coffeeCupImage}
             alt="Coffee Cup"
@@ -50,7 +50,7 @@ function HeroSection() {
           />
         </div>
 
-        <div className="max-w-[335px] md:max-w-[300px] lg:min-w-[350px] ">
+        <div className="max-w-[335px] md:max-w-[300px] lg:max-w-[380px] ">
           <Image
             src={coffeeCupImage}
             alt="Coffee Cup"
@@ -58,7 +58,7 @@ function HeroSection() {
           />
         </div>
 
-        <div className="hidden md:flex md:max-w-[220px] lg:min-w-[280px] pt-4xl ">
+        <div className="hidden md:flex md:max-w-[220px] lg:max-w-[346px] pt-4xl ">
           <Image
             src={coffeeCupImage}
             alt="Coffee Cup"
