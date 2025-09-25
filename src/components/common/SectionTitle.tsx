@@ -5,6 +5,7 @@ interface SectionTitleProps {
   variant?: "hero" | "primary" | "secondary";
   className?: string;
   dark?: boolean;
+  align?: "start" | "center" | "end";
 }
 
 function SectionTitle({
@@ -12,14 +13,30 @@ function SectionTitle({
   variant = "secondary",
   className = "",
   dark = false,
+  align = "center",
 }: SectionTitleProps) {
   const headingLevel = variant === "hero" ? 1 : variant === "primary" ? 2 : 3;
-  const baseStyles = `font-calistoga ${
+  const baseStyles = `w-fit font-calistoga ${
     dark ? "text-brand-primary" : "text-accent-hightlight"
-  } text-2xlarge lg:text-4xlarge leading-14 lg:leading-24`;
+  } `;
+
+  const variantStyles = {
+    hero: "text-2xlarge lg:text-4xlarge leading-14 lg:leading-24",
+    primary: `text-[32px] md:text-[56px] lg:text-[64px] leading-9 md:leading-16 lg:leading-18 ${
+      align === "center"
+        ? "text-center"
+        : align === "end"
+        ? "text-end"
+        : "text-start"
+    }`,
+    secondary: "",
+  };
 
   return (
-    <Heading level={headingLevel} className={`${baseStyles} ${className}`}>
+    <Heading
+      level={headingLevel}
+      className={`${baseStyles} ${variantStyles[variant]} ${className}`}
+    >
       {children}
     </Heading>
   );
