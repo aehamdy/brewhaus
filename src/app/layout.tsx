@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Cabin_Condensed, Calistoga } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/common/Header";
+import Footer from "@/footer/Footer";
+import FooterBottomBar from "@/components/common/FooterBottomBar";
 
 const cabinCondensed = Cabin_Condensed({
   subsets: ["latin"],
@@ -32,6 +34,8 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
+        <FooterBottomBar />
       </body>
     </html>
   );
