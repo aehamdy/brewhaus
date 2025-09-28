@@ -4,29 +4,7 @@ import Logo from "@/components/common/Logo";
 import { ROUTES } from "@/lib/routes";
 import Link from "next/link";
 import { useState } from "react";
-
-const navLinks = [
-  {
-    id: 1,
-    label: "Menu",
-    href: ROUTES.menu,
-  },
-  {
-    id: 2,
-    label: "Locations",
-    href: ROUTES.locations,
-  },
-  {
-    id: 3,
-    label: "About",
-    href: ROUTES.about,
-  },
-  {
-    id: 4,
-    label: "News",
-    href: ROUTES.news,
-  },
-];
+import { navLinks } from "@/data/navLinks";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -85,7 +63,7 @@ function Header() {
           } bg-brand-primary-muted rounded-md`}
         >
           <ul className="flex flex-col justify-between items-center gap-2 w-full py-[18px] px-md">
-            {navLinks.map((link) => (
+            {(navLinks ?? []).map((link) => (
               <li key={link.id} className="w-full rounded-pill overflow-hidden">
                 <Link
                   href={link.href}
@@ -100,7 +78,7 @@ function Header() {
 
         <div className="hidden md:flex items-center gap-2xl mx-auto">
           <ul className="flex justify-between items-center gap-2xl">
-            {navLinks.slice(0, 2).map((link) => (
+            {(navLinks ?? []).slice(0, 2).map((link) => (
               <li key={link.id}>
                 <Link
                   href={link.href}
@@ -117,7 +95,7 @@ function Header() {
           </Link>
 
           <ul className="flex justify-between items-center gap-2xl">
-            {navLinks.slice(2).map((link) => (
+            {(navLinks ?? []).slice(2).map((link) => (
               <li key={link.id}>
                 <Link
                   href={link.href}
