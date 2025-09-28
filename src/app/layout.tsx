@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/common/Header";
 import Footer from "@/footer/Footer";
 import FooterBottomBar from "@/components/common/FooterBottomBar";
+import MarqueeText from "@/components/common/MarqueeText";
 
 const cabinCondensed = Cabin_Condensed({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <MarqueeText />
         <Footer />
         <FooterBottomBar />
       </body>
