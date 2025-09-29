@@ -51,6 +51,10 @@ function Testimonials() {
             </li>
           ))}
         </ul>
+
+        <Button href={ROUTES.locations} className="">
+          Our Locations
+        </Button>
       </div>
     </Section>
   );
