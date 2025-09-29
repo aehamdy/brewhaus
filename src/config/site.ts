@@ -12,6 +12,8 @@ interface SiteConfig {
 type Contact = {
   email: string;
   phone: string;
+  supportEmail: string;
+  customerSupport: string;
 };
 type Social = {
   id: number;
@@ -27,6 +29,8 @@ export const siteConfig: SiteConfig = {
   contact: {
     email: "hello@bhaus.com",
     phone: "+1 (212) 555-0198",
+    supportEmail: "support@bhaus.com",
+    customerSupport: "+1 (718) 555-0243",
   },
 
   socials: [
