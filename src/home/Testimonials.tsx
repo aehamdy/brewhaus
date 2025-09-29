@@ -3,6 +3,8 @@ import SectionTitle from "@/components/common/SectionTitle";
 import testimonialsList from "@/data/testimonials";
 import Image from "next/image";
 import quotesImage from "@/assets/double-quotes.svg";
+import Button from "@/components/common/Button";
+import { ROUTES } from "@/lib/routes";
 
 function Testimonials() {
   return (
@@ -20,7 +22,7 @@ function Testimonials() {
               key={testimonial.id}
               className="flex flex-col md:flex-row md:even:flex-row-reverse lg:flex-col lg:even:flex-col-reverse gap-base md:h-[251px] lg:h-[640px]"
             >
-              <div className="flex-1 flex flex-col items-start gap-5 py-lg px-md text-brand-primary bg-surface-secondary border border-subtle rounded-lg">
+              <div className="flex-1 flex flex-col items-start gap-5 lg:max-h-[209px] py-lg px-md text-brand-primary bg-surface-secondary border border-subtle rounded-lg">
                 <div className="">
                   <Image
                     src={quotesImage}
