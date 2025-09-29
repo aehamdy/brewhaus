@@ -1,6 +1,6 @@
 interface SectionProps {
   children: React.ReactNode;
-  background: "primary" | "secondary";
+  background: "primary" | "secondary" | "highlight";
   className?: string;
   border: boolean;
 }
@@ -16,7 +16,9 @@ function Section({
       className={`py-[104px] md:py-5xl ${
         background === "primary"
           ? "bg-surface-primary"
-          : background === "secondary" && "bg-surface-secondary"
+          : background === "secondary"
+          ? "bg-surface-secondary"
+          : background === "highlight" && "bg-brand-primary"
       } ${border && "border-b border-subtle"} ${className}`}
     >
       {children}
