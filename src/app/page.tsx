@@ -3,6 +3,8 @@ import Categories from "@/home/Categories";
 import HeroSection from "@/home/HeroSection";
 import OrderOnline from "@/home/OrderOnline";
 import Products from "@/home/Products";
+import Testimonials from "@/home/Testimonials";
+import Vibes from "@/home/Vibes";
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
       <MarqueeText />
       <Categories />
       <Products />
+      <Vibes />
+      <Testimonials />
       <OrderOnline />
     </main>
   );
