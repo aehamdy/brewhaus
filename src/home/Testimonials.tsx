@@ -22,26 +22,28 @@ function Testimonials() {
               key={testimonial.id}
               className="flex flex-col md:flex-row md:even:flex-row-reverse lg:flex-col lg:even:flex-col-reverse gap-base md:h-[251px] lg:h-[640px]"
             >
-              <div className="flex-1 flex flex-col items-start gap-5 lg:max-h-[209px] py-lg px-md text-brand-primary bg-surface-secondary border border-subtle rounded-lg">
-                <div className="">
-                  <Image
-                    src={quotesImage}
-                    alt="quotes-image"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              <div className="flex-1 flex items-center max-h-[209px] md:max-h-full lg:max-h-[209px] text-brand-primary bg-surface-secondary border border-subtle rounded-lg">
+                <div className="flex flex-col items-start gap-5 py-lg px-md">
+                  <div className="">
+                    <Image
+                      src={quotesImage}
+                      alt="quotes-image"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
 
-                <div className="font-calistoga leading-5">
-                  {testimonial.feedback}
-                </div>
+                  <div className="font-calistoga leading-5">
+                    {testimonial.feedback}
+                  </div>
 
-                <div className="flex items-center text-brand-secondary">
-                  <p className="">{testimonial.name}</p> -{" "}
-                  <p className="">{testimonial.title}</p>
+                  <div className="flex items-center text-brand-secondary">
+                    <p className="">{testimonial.name}</p> -{" "}
+                    <p className="">{testimonial.title}</p>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex-1 h-[382px] md:h-auto rounded-lg overflow-hidden">
+              <div className="flex-1 max-h-[382px] md:max-h-full rounded-lg overflow-hidden">
                 <Image
                   src={testimonial.image}
                   alt={testimonial.name}
