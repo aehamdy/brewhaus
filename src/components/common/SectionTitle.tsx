@@ -21,7 +21,7 @@ function SectionTitle({
   } `;
 
   const variantStyles = {
-    hero: "text-2xlarge lg:text-4xlarge leading-14 lg:leading-24",
+    hero: "text-2xlarge md:text-[80px] lg:text-[96px] leading-14 lg:leading-24",
     primary: `text-[32px] md:text-[56px] lg:text-[64px] leading-9 md:leading-16 lg:leading-18 ${
       align === "center"
         ? "text-center"
@@ -29,7 +29,7 @@ function SectionTitle({
         ? "text-end"
         : "text-start"
     }`,
-    secondary: "",
+    secondary: "text-[24px] md:text-[32px] text-center leading-7 md:leading-10",
   };
 
   return (
