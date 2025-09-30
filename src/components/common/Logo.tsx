@@ -1,14 +1,23 @@
 import Image from "next/image";
 import logoImage from "@/assets/logo.svg";
+import logoAltImage from "@/assets/logo-alt.svg";
 
-function Logo() {
+interface LogoProps {
+  variant?: "primary" | "alt";
+}
+
+function Logo({ variant = "primary" }: LogoProps) {
   return (
-    <div className="group relative flex flex-col items-end justify-center w-10 h-10 bg-accent-highlight rounded-full overflow-hidden">
+    <div
+      className={`group relative flex flex-col items-end justify-center w-10 h-10 ${
+        variant === "primary" ? "bg-accent-highlight" : "bg-brand-primary"
+      } rounded-full overflow-hidden`}
+    >
       {/* Viewport */}
       <div className="absolute bottom-0 start-1/2 -translate-x-1/2 w-[26px] h-[26px] pt-1">
         {/* Top image (visible by default) */}
         <Image
-          src={logoImage}
+          src={variant === "primary" ? logoImage : logoAltImage}
           alt="Logo"
           fill
           sizes="24px"
@@ -19,7 +28,7 @@ function Logo() {
       <div className="absolute bottom-0 start-1/2 -translate-x-1/2 w-[26px] h-[26px] pt-1">
         {/* Bottom image (slides in on hover) */}
         <Image
-          src={logoImage}
+          src={variant === "primary" ? logoImage : logoAltImage}
           alt="Logo"
           fill
           sizes="24px"
