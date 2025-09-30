@@ -27,7 +27,7 @@ function Button({
     secondary:
       "text-brand-primary hover:text-accent-highlight bg-accent-highlight hover:bg-brand-primary active:bg-brand-primary-muted border border-accent-highlight",
     tertiary:
-      "text-accent-highlight hover:text-brand-primary active:text-accent-highlight bg-brand-primary hover:bg-transparent active:bg-brand-primary-muted border border-brand-primary",
+      "text-brand-primary hover:text-brand-primary active:text-accent-highlight bg-transparent hover:bg-brand-secondary active:bg-brand-primary-muted border border-brand-primary",
     menu: "text-brand-primary hover:text-accent-highlight bg-accent-highlight hover:bg-brand-primary active:bg-brand-primary-muted",
   };
   const sizeStyles = {
