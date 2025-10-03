@@ -7,7 +7,11 @@ import mapImage from "@/assets/map.svg";
 import Heading from "@/components/common/Heading";
 import contacts from "@/data/contacts";
 
-function Nearby() {
+interface NearbyProps {
+  title?: boolean;
+}
+
+function Nearby({ title = true }: NearbyProps) {
   return (
     <Section
       background="highlight"
@@ -15,15 +19,17 @@ function Nearby() {
       className="text-accent-highlight"
     >
       <div className="grid grid-cols-1 gap-2xl lg:gap-3xl px-md md:px-xl">
-        <div className="flex flex-col items-center gap-3">
-          <SectionTitle variant="primary" align="center">
-            Nearby Cafés
-          </SectionTitle>
+        {title && (
+          <div className="flex flex-col items-center gap-3">
+            <SectionTitle variant="primary" align="center">
+              Nearby Cafés
+            </SectionTitle>
 
-          <p className="">
-            Find a Brewhaus nearby and stop in for your favorite drink.
-          </p>
-        </div>
+            <p className="">
+              Find a Brewhaus nearby and stop in for your favorite drink.
+            </p>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-base md:gap-md">
           <ul className="lg:order-2 grid grid-cols-1 md:grid-cols-2 gap-base md:gap-md">
