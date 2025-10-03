@@ -21,7 +21,7 @@ function SectionTitle({
   } `;
 
   const variantStyles = {
-    hero: "text-2xlarge md:text-[80px] lg:text-[96px] leading-14 lg:leading-24",
+    hero: "text-2xlarge md:text-4xlarge lg:text-5xlarge leading-14 md:leading-23 lg:leading-24",
     primary: `text-[32px] md:text-[56px] lg:text-[64px] leading-9 md:leading-16 lg:leading-18 ${
       align === "center"
         ? "text-center"
