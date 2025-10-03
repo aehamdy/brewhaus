@@ -1,9 +1,12 @@
 import Image1 from "@/assets/whats-new/whats-new-1.webp";
 import Image2 from "@/assets/whats-new/whats-new-2.webp";
 import Image3 from "@/assets/whats-new/whats-new-3.webp";
+import Image4 from "@/assets/whats-new/whats-new-4.webp";
+import Image5 from "@/assets/whats-new/whats-new-5.webp";
+import Image6 from "@/assets/whats-new/whats-new-6.webp";
 import { StaticImageData } from "next/image";
 
-interface WhatsNew {
+export interface WhatsNew {
   id: number;
   image: StaticImageData;
   date: string;
@@ -102,6 +105,103 @@ const whatsNewList: WhatsNew[] = [
       },
     ],
     tags: ["coffeerewards", "loyaltyperks", "brewhausloyalty", "brewhaus"],
+  },
+  {
+    id: 4,
+    image: Image4,
+    date: "Mar 6, 2025",
+    title: "We're Now Available on DoorDash and Uber Eats for Easy Ordering!",
+    description:
+      "Great coffee is now just a few taps away — always freshly made and delivered straight to your door, exactly when and wherever you need it most.",
+    content: [
+      {
+        id: 1,
+        title: "Coffee, delivered the way you want it",
+        description: [
+          "We know life gets busy — and sometimes, stepping out just isn’t in the cards. That’s why we’re excited to announce that you can now order your favorite Brewhaus drinks and treats directly through DoorDash and Uber Eats.",
+          "Whether you're working from home, relaxing on the weekend, or just need your usual order without the wait, we’ve got you covered. From handcrafted lattes to fresh pastries, everything you love from our café is now just a few taps away.",
+        ],
+      },
+      {
+        id: 2,
+        title: "How to order",
+        description: [
+          "Just open your DoorDash or Uber Eats app, search for Brewhaus, and place your order for delivery or pickup. It’s fast, easy, and lets you enjoy your favorites without missing a beat.",
+          "Coffee on your couch? Yes, please.",
+        ],
+      },
+    ],
+    tags: [
+      "coffeetoyou",
+      "doordash",
+      "ubereats",
+      "brewhausdelivery",
+      "brewhaus",
+    ],
+  },
+  {
+    id: 5,
+    image: Image5,
+    date: "Feb 18, 2025",
+    title: "Brewhaus Proudly Celebrates 2 Years Serving Brooklyn",
+    description:
+      "Great coffee is now just a few taps away — always freshly made and delivered straight to your door, exactly when and wherever you need it most.",
+    content: [
+      {
+        id: 1,
+        title: "A big thank you, Brooklyn",
+        description: [
+          "This month marks two incredible years since we opened our doors in the heart of Williamsburg — and we couldn’t be more grateful. What started as a cozy corner for great coffee has grown into a warm and welcoming spot where locals gather, remote workers recharge, and friends connect over their favorite brews.",
+          "Over the past two years, we’ve served thousands of handcrafted drinks, introduced seasonal favorites, partnered with local bakers and roasters, and shared a lot of smiles. We’ve watched regulars become friends and first-time visitors become part of the Brewhaus family. From cold brews on hot days to snowy mornings with cappuccinos in hand, it’s been a journey full of flavor and heart — and we’re just getting started.",
+        ],
+      },
+      {
+        id: 2,
+        title: "Join us for a week of thanks",
+        description: [
+          "To celebrate, we’re offering special deals and surprises all week long at our Brooklyn location — including $2 espresso shots and limited-edition merch drops. Come by, raise a cup, and help us toast to what’s next. Thank you for being part of the Brewhaus story. Here’s to many more years of great coffee and even better community.",
+        ],
+      },
+    ],
+    tags: [
+      "2yearsstrong",
+      "coffeewithcommunity",
+      "thankyoubrooklyn",
+      "brooklyn",
+      "brewhaus",
+    ],
+  },
+  {
+    id: 6,
+    image: Image6,
+    date: "Feb 3, 2025",
+    title: "Your Favorite Syrups Are Now Available Sugar-Free in All Drinks",
+    description:
+      "Your favorite flavors, now with zero sugar. All syrups are available sugar-free, letting you enjoy any drink just the way you like it — guilt-free and full of taste.",
+    content: [
+      {
+        id: 1,
+        title: "All the flavor you love, without the sugar",
+        description: [
+          "We know how much our customers enjoy flavored drinks — whether it's a cozy vanilla latte, a refreshing iced caramel macchiato, or a bold hazelnut cold brew. That’s why we’re excited to offer sugar-free versions of all your favorite syrups. Now you can enjoy the same rich, indulgent flavor with no added sugar — perfect for those cutting back, watching calories, or simply looking for a lighter option.",
+          "Our new sugar-free syrups are available in all your go-to flavors: vanilla, caramel, hazelnut, and more. Whether you prefer your drink hot or iced, you can customize it your way without sacrificing taste. We've worked hard to make sure every sip still delivers the flavor you love — smooth, satisfying, and now guilt-free.",
+        ],
+      },
+      {
+        id: 2,
+        title: "Just Ask for Sugar-Free at the Counter",
+        description: [
+          "Making the switch is easy. Just let your barista know you'd like your drink made with sugar-free syrup — no extra steps, no extra charge. It’s the same handcrafted quality, made to fit your lifestyle. At Brewhaus, we believe coffee should be as flexible as you are. That’s why we’re proud to offer more options that fit your taste and wellness goals — because great coffee should never mean compromise.",
+        ],
+      },
+    ],
+    tags: [
+      "sugarfree",
+      "coffeeyourway",
+      "customcoffee",
+      "guiltfreesips",
+      "brewhaus",
+    ],
   },
 ];
 
