@@ -8,7 +8,7 @@ function HeroSection() {
   return (
     <section
       id="hero"
-      className="h-dvh md:h-[95dvh] lg:h-[155dvh] space-y-2xl pt-[184px] bg-brand-primary overflow-hidden"
+      className="h-dvh md:h-[96dvh] lg:h-[155dvh] space-y-2xl pt-[184px] bg-brand-primary overflow-hidden"
     >
       <div className="flex flex-col justify-center items-center gap-lg px-md">
         <div className="flex flex-col items-center gap-sm text-accent-highlight text-center">
@@ -22,7 +22,7 @@ function HeroSection() {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row lg:justify-center items-center gap-xs w-full">
+        <div className="flex flex-col md:flex-row md:justify-center items-center gap-xs w-full">
           <Button
             type="link"
             href={ROUTES.menu}
