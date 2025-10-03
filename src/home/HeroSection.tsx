@@ -8,7 +8,7 @@ function HeroSection() {
   return (
     <section
       id="hero"
-      className="h-dvh md:h-[96dvh] lg:h-[155dvh] space-y-2xl pt-[184px] bg-brand-primary overflow-hidden"
+      className="h-dvh md:h-[96dvh] lg:h-[125dvh] space-y-2xl pt-[184px] bg-brand-primary overflow-hidden"
     >
       <div className="flex flex-col justify-center items-center gap-lg px-md">
         <div className="flex flex-col items-center gap-sm text-accent-highlight text-center">
