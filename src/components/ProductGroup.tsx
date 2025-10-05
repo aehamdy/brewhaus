@@ -34,8 +34,8 @@ function ProductGroup() {
 
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
               {categoryProducts.map((product) => (
-                <li key={product.id} className="">
-                  <Link href={`${ROUTES.menu}/${product.id}`}>
+                <li key={product.id}>
+                  <Link href={`${ROUTES.menu}/${product.slug}`}>
                     <ProductCard product={product} />
                   </Link>
                 </li>
