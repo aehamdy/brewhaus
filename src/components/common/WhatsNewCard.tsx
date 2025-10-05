@@ -12,10 +12,10 @@ function WhatsNewCard({ item }: Props) {
   return (
     <article className="group">
       <Link
-        href={`${ROUTES.news}/${item.id}`}
+        href={`${ROUTES.news}/${item.slug}`}
         className="flex flex-col gap-base"
       >
-        <div className="h-[382px] md:h-[332px] lg:h-[280px] rounded-lg overflow-hidden">
+        <div className="h-[382px] md:h-[440px] lg:h-[280px] rounded-lg overflow-hidden">
           <Image
             src={item.image}
             alt={item.title}
