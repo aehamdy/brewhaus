@@ -18,6 +18,20 @@ import macaroonImage from "@/assets/products/bakery/macaroon.webp";
 import donutImage from "@/assets/products/bakery/donut.webp";
 import muffinImage from "@/assets/products/bakery/muffin.webp";
 import biscottiImage from "@/assets/products/bakery/biscotti.webp";
+import { StaticImageData } from "next/image";
+
+export interface Product {
+  id: number;
+  category: string;
+  slug: string;
+  title: string;
+  isNew: boolean;
+  price: number;
+  description: string;
+  options: { size: string; value?: string }[];
+  allergens: string[];
+  image: StaticImageData;
+}
 
 export const products = [
   // Coffee Category
