@@ -1,17 +1,6 @@
 import Heading from "@/components/common/Heading";
-import Image, { StaticImageData } from "next/image";
-
-interface Product {
-  id: number;
-  category: string;
-  title: string;
-  isNew: boolean;
-  price: number;
-  description: string;
-  options: string[];
-  allergens: string[];
-  image: StaticImageData;
-}
+import { Product } from "@/data/products";
+import Image from "next/image";
 
 function ProductCard({ product }: { product: Product }) {
   const { title, price, image, isNew } = product;
