@@ -11,12 +11,13 @@ interface NewsArticlePageProps {
   params: { articleSlug: string };
 }
 
-function NewsArticlePage({ params }: NewsArticlePageProps) {
-  const article = whatsNewList.find(
-    (article) => article.slug === params.articleSlug
-  );
+async function NewsArticlePage({ params }: NewsArticlePageProps) {
+  const { articleSlug } = await params;
+
+  const article = whatsNewList.find((article) => article.slug === articleSlug);
 
   if (!article) {
+    console.log("article not found");
     return NotFound();
   }
 
