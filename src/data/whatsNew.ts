@@ -11,6 +11,7 @@ export interface WhatsNew {
   image: StaticImageData;
   date: string;
   title: string;
+  slug: string;
   description: string;
   content: {
     id: number;
@@ -26,6 +27,7 @@ const whatsNewList: WhatsNew[] = [
     image: Image1,
     date: "Apr 10, 2025",
     title: "Celebrate the Season with Our New Spring Drink Specials Today",
+    slug: "celebrate-the-season-with-our-new-spring-drink-specials-today",
     description:
       "Sip into spring with fresh, vibrant flavors — now available at Brewhaus, where every cup is crafted to bring the essence of the season straight to you!",
     content: [
@@ -58,6 +60,7 @@ const whatsNewList: WhatsNew[] = [
     image: Image2,
     date: "Apr 2, 2025",
     title: "Our New Brewhaus Flushing Location Is Now Officially Open",
+    slug: "our-new-brewhaus-flushing-location-is-now-officially-open",
     description:
       "Fresh brews, cozy vibes, and a new neighborhood to call home — we’re thrilled to bring the Brewhaus to Flushing, and we can’t wait to share it with you.",
     content: [
@@ -85,6 +88,7 @@ const whatsNewList: WhatsNew[] = [
     image: Image3,
     date: "Mar 23, 2025",
     title: "Introducing Our Exciting New Loyalty Program for Coffee Lovers",
+    slug: "introducing-our-exciting-new-loyalty-program-for-coffee-lovers",
     description:
       "Get rewarded every time you enjoy your favorite brew — our brand-new loyalty program is here to make your coffee experience even more rewarding!",
     content: [
@@ -111,6 +115,7 @@ const whatsNewList: WhatsNew[] = [
     image: Image4,
     date: "Mar 6, 2025",
     title: "We're Now Available on DoorDash and Uber Eats for Easy Ordering!",
+    slug: "were-now-available-on-doordash-and-uber-eats-for-easy-ordering",
     description:
       "Great coffee is now just a few taps away — always freshly made and delivered straight to your door, exactly when and wherever you need it most.",
     content: [
@@ -144,6 +149,7 @@ const whatsNewList: WhatsNew[] = [
     image: Image5,
     date: "Feb 18, 2025",
     title: "Brewhaus Proudly Celebrates 2 Years Serving Brooklyn",
+    slug: "brewhaus-proudly-celebrates-2-years-serving-brooklyn",
     description:
       "Great coffee is now just a few taps away — always freshly made and delivered straight to your door, exactly when and wherever you need it most.",
     content: [
@@ -176,6 +182,7 @@ const whatsNewList: WhatsNew[] = [
     image: Image6,
     date: "Feb 3, 2025",
     title: "Your Favorite Syrups Are Now Available Sugar-Free in All Drinks",
+    slug: "your-favorite-syrups-are-now-available-sugar-free-in-all-drinks",
     description:
       "Your favorite flavors, now with zero sugar. All syrups are available sugar-free, letting you enjoy any drink just the way you like it — guilt-free and full of taste.",
     content: [
@@ -206,3 +213,4 @@ const whatsNewList: WhatsNew[] = [
 ];
 
 export default whatsNewList;
+
