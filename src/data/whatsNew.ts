@@ -213,4 +213,3 @@ const whatsNewList: WhatsNew[] = [
 ];
 
 export default whatsNewList;
-
