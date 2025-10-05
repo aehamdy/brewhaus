@@ -8,10 +8,10 @@ type ProductPageProps = {
   params: { productSlug: string };
 };
 
-function ProductPage({ params }: ProductPageProps) {
-  const product = products.find(
-    (product) => product.slug === params.productSlug
-  );
+async function ProductPage({ params }: ProductPageProps) {
+  const { productSlug } = await params;
+
+  const product = products.find((product) => product.slug === productSlug);
 
   if (!product) {
     return notFound();
