@@ -18,7 +18,7 @@ function page() {
         </div>
       </PageHero>
 
-      <div className="pb-[104px] px-md md:px-xl">
+      <div className="pb-[104px] px-md md:px-xl lg:px-4xl">
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
           {whatsNew.map((item) => (
             <li key={item.id}>
