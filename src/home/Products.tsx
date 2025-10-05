@@ -34,7 +34,7 @@ function Products() {
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-base md:gap-md">
             {filteredProducts.map((product) => (
               <li key={product.id}>
-                <Link href="">
+                <Link href={`${ROUTES.menu}/${product.slug}`}>
                   <ProductCard product={product} />
                 </Link>
               </li>
