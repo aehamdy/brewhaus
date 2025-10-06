@@ -4,11 +4,32 @@ import Heading from "@/components/common/Heading";
 import PageHero from "@/components/common/PageHero";
 import WhatsNewCard from "@/components/common/WhatsNewCard";
 import NewsArticleContent from "@/components/NewsArticleContent";
+import { siteConfig } from "@/config/site";
 import whatsNewList from "@/data/whatsNew";
 import { ROUTES } from "@/lib/routes";
+import { Metadata } from "next";
 
 interface NewsArticlePageProps {
   params: { articleSlug: string };
+}
+
+export async function generateMetadata({
+  params,
+}: NewsArticlePageProps): Promise<Metadata> {
+  const { articleSlug } = await params;
+  const article = whatsNewList.find((article) => article.slug === articleSlug);
+
+  if (!article) {
+    return {
+      title: `Article Not Found - ${siteConfig.name}`,
+      description: "The requested article could not be found.",
+    };
+  }
+
+  return {
+    title: `${article.title} - ${siteConfig.name}`,
+    description: `Read the latest updates from ${siteConfig.name}.`,
+  };
 }
 
 async function NewsArticlePage({ params }: NewsArticlePageProps) {
