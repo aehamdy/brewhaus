@@ -6,6 +6,7 @@ import Footer from "@/components/footer/Footer";
 import FooterBottomBar from "@/components/common/FooterBottomBar";
 import MarqueeText from "@/components/common/MarqueeText";
 import { siteConfig } from "@/config/site";
+import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 
 const cabinCondensed = Cabin_Condensed({
   subsets: ["latin"],
@@ -38,11 +39,13 @@ export default function RootLayout({
       <body
         className={`${cabinCondensed.variable} ${calistoga.variable} antialiased`}
       >
-        <Header />
-        {children}
-        <MarqueeText />
-        <Footer />
-        <FooterBottomBar />
+        <SmoothScrollProvider>
+          <Header />
+          {children}
+          <MarqueeText />
+          <Footer />
+          <FooterBottomBar />
+        </SmoothScrollProvider>
       </body>
     </html>
   );
