@@ -56,7 +56,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* Disable native smooth scrolling to avoid conflicts with GSAP ScrollSmoother */
+  scroll-behavior: auto;
 }
 
 body {
