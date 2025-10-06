@@ -3,10 +3,30 @@ import { products } from "@/data/products";
 import OrderOnline from "@/components/home/OrderOnline";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 
 type ProductPageProps = {
   params: { productSlug: string };
 };
+
+export async function generateMetadata({
+  params,
+}: ProductPageProps): Promise<Metadata> {
+  const { productSlug } = await params;
+  const product = products.find((p) => p.slug === productSlug);
+
+  if (!product) {
+    return {
+      title: "Product Not Found - Brewhaus",
+      description: "The requested product could not be found.",
+    };
+  }
+
+  return {
+    title: `${product.title} - Brewhaus`,
+    description: "Discover Brewhaus specialty coffee products.",
+  };
+}
 
 async function ProductPage({ params }: ProductPageProps) {
   const { productSlug } = await params;
