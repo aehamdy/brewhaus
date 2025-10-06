@@ -7,7 +7,7 @@ import ProductGroup from "@/components/ProductGroup";
 
 function Page() {
   return (
-    <section>
+    <main>
       <PageHero className="text-accent-highlight" background="dark">
         <div className="flex flex-col gap-lg">
           <div className="flex flex-col items-center gap-sm md:gap-base w-full px-md md:px-xl">
@@ -37,7 +37,7 @@ function Page() {
 
         <ProductGroup />
       </div>
-    </section>
+    </main>
   );
 }
 

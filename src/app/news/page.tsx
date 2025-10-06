@@ -5,7 +5,7 @@ import whatsNew from "@/data/whatsNew";
 
 function page() {
   return (
-    <section className="bg-surface-primary">
+    <main className="bg-surface-primary">
       <PageHero className="text-brand-primary" background="light">
         <div className="flex flex-col items-center gap-sm">
           <SectionTitle variant="hero" dark>
@@ -27,7 +27,7 @@ function page() {
           ))}
         </ul>
       </div>
-    </section>
+    </main>
   );
 }
 

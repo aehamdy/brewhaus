@@ -18,11 +18,9 @@ async function ProductPage({ params }: ProductPageProps) {
   }
 
   return (
-    <section className="pt-[144px] md:pt-[184px] bg-surface-primary">
+    <main className="pt-[144px] md:pt-[184px] bg-surface-primary">
       <div className="flex justify-center">
-        {/* <div className="flex flex-col md:flex-row lg:justify-between gap-lg md:gap-md lg:gap-xl lg:w-[85%] pb-10 px-md md:px-lg lg:px-4xl text-brand-primary"> */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-lg md:gap-md lg:gap-xl lg:w-[85%] pb-10 px-md md:px-lg lg:px-4xl text-brand-primary">
-          {/* <div className="lg:flex-1 md:h-[323px] lg:max-w-[400px] lg:h-[400px] bg-brand-primary rounded-lg overflow-hidden"> */}
           <div className="md:col-span-2 md:h-[323px] lg:max-w-[400px] lg:h-[400px] bg-brand-primary rounded-lg overflow-hidden">
             <Image
               src={product.image}
@@ -31,9 +29,7 @@ async function ProductPage({ params }: ProductPageProps) {
             />
           </div>
 
-          {/* <div className="lg:flex-1 flex flex-col gap-lg md:ps-md"> */}
           <div className="md:col-span-2 flex flex-col gap-lg md:ps-md">
-            {/* title, price and description */}
             <div className="flex flex-col gap-md">
               <div className="flex flex-col font-calistoga">
                 <Heading level={2} className="text-xlarge lg:text-[44px]">
@@ -51,7 +47,6 @@ async function ProductPage({ params }: ProductPageProps) {
               <p className="">{product.description}</p>
             </div>
 
-            {/* sizes */}
             <div className="flex flex-col gap-md text-small">
               <div className="flex flex-col gap-3 pt-5 border-t border-t-subtle">
                 <Heading
@@ -76,7 +71,6 @@ async function ProductPage({ params }: ProductPageProps) {
                 </div>
               </div>
 
-              {/* allergens */}
               <div className="flex flex-col gap-3 pt-5 border-t border-t-subtle">
                 <div className="flex flex-col gap-3">
                   <Heading
@@ -108,7 +102,7 @@ async function ProductPage({ params }: ProductPageProps) {
       </div>
 
       <OrderOnline />
-    </section>
+    </main>
   );
 }
 

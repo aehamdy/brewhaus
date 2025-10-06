@@ -14,7 +14,7 @@ import Vibes from "@/components/home/Vibes";
 
 function page() {
   return (
-    <section className="">
+    <main>
       <PageHero className="text-accent-highlight" background="dark">
         <div className="flex flex-col items-center gap-sm md:gap-base">
           <SectionTitle variant="hero">About Us</SectionTitle>
@@ -151,7 +151,7 @@ function page() {
 
         <OrderOnline />
       </section>
-    </section>
+    </main>
   );
 }
 
