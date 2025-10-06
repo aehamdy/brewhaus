@@ -4,6 +4,7 @@ import OrderOnline from "@/components/home/OrderOnline";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
+import { siteConfig } from "@/config/site";
 
 type ProductPageProps = {
   params: { productSlug: string };
@@ -17,14 +18,14 @@ export async function generateMetadata({
 
   if (!product) {
     return {
-      title: "Product Not Found - Brewhaus",
+      title: `Product Not Found - ${siteConfig.name}`,
       description: "The requested product could not be found.",
     };
   }
 
   return {
-    title: `${product.title} - Brewhaus`,
-    description: "Discover Brewhaus specialty coffee products.",
+    title: `${product.title} - ${siteConfig.name}`,
+    description: `Discover ${siteConfig.name} specialty coffee products.`,
   };
 }
 
