@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   title: `${siteConfig.name} - ${siteConfig.slogan}`,
   description:
     "Welcome to Brewhaus — where every cup is crafted with passion. Discover rich flavors, cozy spaces, and a community that celebrates coffee culture.",
+  icons: {
+    icon: [{ url: "/favicon.ico" }],
+  },
 };
 
 export default function RootLayout({
