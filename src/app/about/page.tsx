@@ -9,8 +9,8 @@ import Image from "next/image";
 import aboutImage from "@/assets/about/about.webp";
 import { features } from "@/data/features";
 import Heading from "@/components/common/Heading";
-import OrderOnline from "@/home/OrderOnline";
-import Vibes from "@/home/Vibes";
+import OrderOnline from "@/components/home/OrderOnline";
+import Vibes from "@/components/home/Vibes";
 
 function page() {
   return (

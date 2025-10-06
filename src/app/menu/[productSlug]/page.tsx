@@ -1,6 +1,6 @@
 import Heading from "@/components/common/Heading";
 import { products } from "@/data/products";
-import OrderOnline from "@/home/OrderOnline";
+import OrderOnline from "@/components/home/OrderOnline";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 

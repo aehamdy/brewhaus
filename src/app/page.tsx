@@ -1,12 +1,12 @@
 import MarqueeText from "@/components/common/MarqueeText";
-import Categories from "@/home/Categories";
-import HeroSection from "@/home/HeroSection";
-import Nearby from "@/home/Nearby";
-import OrderOnline from "@/home/OrderOnline";
-import Products from "@/home/Products";
-import Testimonials from "@/home/Testimonials";
-import Vibes from "@/home/Vibes";
-import WhatsNew from "@/home/WhatsNew";
+import Categories from "@/components/home/Categories";
+import HeroSection from "@/components/home/HeroSection";
+import Nearby from "@/components/home/Nearby";
+import OrderOnline from "@/components/home/OrderOnline";
+import Products from "@/components/home/Products";
+import Testimonials from "@/components/home/Testimonials";
+import Vibes from "@/components/home/Vibes";
+import WhatsNew from "@/components/home/WhatsNew";
 
 export default function Home() {
   return (

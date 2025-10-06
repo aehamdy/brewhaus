@@ -1,6 +1,6 @@
 import PageHero from "@/components/common/PageHero";
 import SectionTitle from "@/components/common/SectionTitle";
-import Nearby from "@/home/Nearby";
+import Nearby from "@/components/home/Nearby";
 
 function page() {
   return (

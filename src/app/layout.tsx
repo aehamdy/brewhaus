@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import { Cabin_Condensed, Calistoga } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/common/Header";
-import Footer from "@/footer/Footer";
+import Footer from "@/components/footer/Footer";
 import FooterBottomBar from "@/components/common/FooterBottomBar";
 import MarqueeText from "@/components/common/MarqueeText";
 
 const cabinCondensed = Cabin_Condensed({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // available weights
+  weight: ["400", "500", "600", "700"],
   variable: "--font-cabin-condensed",
 });
 
 const calistoga = Calistoga({
   subsets: ["latin"],
-  weight: "400", // only 400 is available
+  weight: "400",
   variable: "--font-calistoga",
 });
 

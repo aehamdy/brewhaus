@@ -1,6 +1,6 @@
-import FooterNav from "@/footer/FooterNav";
-import FooterInfo from "@/footer/FooterInfo";
-import FooterSignature from "@/footer/FooterSignature";
+import FooterNav from "@/components/footer/FooterNav";
+import FooterInfo from "@/components/footer/FooterInfo";
+import FooterSignature from "@/components/footer/FooterSignature";
 
 function Footer() {
   return (
