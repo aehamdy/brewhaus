@@ -5,6 +5,7 @@ import Header from "@/components/common/Header";
 import Footer from "@/components/footer/Footer";
 import FooterBottomBar from "@/components/common/FooterBottomBar";
 import MarqueeText from "@/components/common/MarqueeText";
+import { siteConfig } from "@/config/site";
 
 const cabinCondensed = Cabin_Condensed({
   subsets: ["latin"],
@@ -19,8 +20,9 @@ const calistoga = Calistoga({
 });
 
 export const metadata: Metadata = {
-  title: "Brewhaus - Life Begins After Coffee",
-  description: "Life Begins After Coffee",
+  title: `${siteConfig.name} - ${siteConfig.slogan}`,
+  description:
+    "Welcome to Brewhaus — where every cup is crafted with passion. Discover rich flavors, cozy spaces, and a community that celebrates coffee culture.",
 };
 
 export default function RootLayout({
