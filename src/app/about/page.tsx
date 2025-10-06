@@ -11,6 +11,13 @@ import { features } from "@/data/features";
 import Heading from "@/components/common/Heading";
 import OrderOnline from "@/components/home/OrderOnline";
 import Vibes from "@/components/home/Vibes";
+import { Metadata } from "next";
+import { siteConfig } from "@/config/site";
+
+export const metadata: Metadata = {
+  title: `${siteConfig.name} - About Us`,
+  description: "Learn who we are and what we brew for.",
+};
 
 function page() {
   return (
