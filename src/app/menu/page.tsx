@@ -4,6 +4,14 @@ import MarqueeText from "@/components/common/MarqueeText";
 import PageHero from "@/components/common/PageHero";
 import SectionTitle from "@/components/common/SectionTitle";
 import ProductGroup from "@/components/ProductGroup";
+import { Metadata } from "next";
+import { siteConfig } from "@/config/site";
+
+export const metadata: Metadata = {
+  title: `${siteConfig.name} - Menu`,
+  description:
+    "Discover our full menu — from signature espresso blends to freshly baked pastries. Taste the best of Brewhaus in every sip and bite.",
+};
 
 function Page() {
   return (
