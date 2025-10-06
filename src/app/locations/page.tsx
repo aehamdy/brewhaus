@@ -1,6 +1,13 @@
 import PageHero from "@/components/common/PageHero";
 import SectionTitle from "@/components/common/SectionTitle";
 import Nearby from "@/components/home/Nearby";
+import { Metadata } from "next";
+import { siteConfig } from "@/config/site";
+
+export const metadata: Metadata = {
+  title: `${siteConfig.name} - Locations`,
+  description: "Find your nearest brewhaus location.",
+};
 
 function page() {
   return (
