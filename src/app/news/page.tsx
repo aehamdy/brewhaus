@@ -2,6 +2,14 @@ import PageHero from "@/components/common/PageHero";
 import SectionTitle from "@/components/common/SectionTitle";
 import WhatsNewCard from "@/components/common/WhatsNewCard";
 import whatsNew from "@/data/whatsNew";
+import { Metadata } from "next";
+import { siteConfig } from "@/config/site";
+
+export const metadata: Metadata = {
+  title: `${siteConfig.name} - News`,
+  description:
+    "Stay up to date with Brewhaus — new openings, seasonal drinks, events, and stories from our coffee community.",
+};
 
 function page() {
   return (
