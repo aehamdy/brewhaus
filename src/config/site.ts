@@ -24,7 +24,7 @@ type Social = {
 
 export const siteConfig: SiteConfig = {
   name: "Brewhaus",
-  slogan: "",
+  slogan: "Life Begins After Coffee",
 
   contact: {
     email: "hello@bhaus.com",
