@@ -45,11 +45,11 @@
   --radius-full: 100%; /* circle */
 
   /* Durations */
-  --duration-fast: 150ms;
-  --duration-normal: 300ms;
-  --duration-slow: 500ms;
-  --duration-slower: 800ms;
-  --duration-slowest: 1200ms;
+  --transition-duration-fast: 150ms;
+  --transition-duration-normal: 300ms;
+  --transition-duration-slow: 500ms;
+  --transition-duration-slower: 800ms;
+  --transition-duration-slowest: 1200ms;
 
   --font-cabin-condensed: var(--font-cabin-condensed);
   --font-calistoga: var(--font-calistoga);
