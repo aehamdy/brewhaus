@@ -7,6 +7,7 @@ import FooterBottomBar from "@/components/common/FooterBottomBar";
 import MarqueeText from "@/components/common/MarqueeText";
 import { siteConfig } from "@/config/site";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
+import PageTransition from "@/components/PageTransition";
 
 const cabinCondensed = Cabin_Condensed({
   subsets: ["latin"],
@@ -41,10 +42,12 @@ export default function RootLayout({
       >
         <SmoothScrollProvider>
           <Header />
-          {children}
-          <MarqueeText />
-          <Footer />
-          <FooterBottomBar />
+          <PageTransition>
+            {children}
+            <MarqueeText />
+            <Footer />
+            <FooterBottomBar />
+          </PageTransition>
         </SmoothScrollProvider>
       </body>
     </html>
