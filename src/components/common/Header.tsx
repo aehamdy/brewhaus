@@ -3,19 +3,40 @@
 import Logo from "@/components/common/Logo";
 import { ROUTES } from "@/lib/routes";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navLinks } from "@/data/navLinks";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Detect if user scrolled down at least 80px
+      if (window.scrollY > 80) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Run once on mount in case user loads mid-scroll
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 p-md md:pt-lg md:pb-0 md:px-xl">
-      <nav className="relative w-full md:w-fit mx-auto p-3 md:p-[12px] text-accent-highlight bg-brand-primary-muted rounded-pill">
+      <nav
+        className={`navbar relative w-full md:w-fit mx-auto p-3 md:p-[12px] text-accent-highlight ${
+          isScrolled ? "bg-brand-primary-muted" : "bg-brand-primary"
+        } rounded-pill transition-colors duration-slow`}
+      >
         <div className="flex md:hidden justify-between items-center">
           <Link href={ROUTES.home}>
             <Logo />
