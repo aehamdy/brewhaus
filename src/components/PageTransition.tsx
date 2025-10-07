@@ -14,17 +14,25 @@ export default function PageTransitionProvider({
   const containerRef = useRef<HTMLDivElement>(null);
   const isTransitioning = useRef(false);
 
+  // When a new page mounts, animate it in
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Animate new page when it mounts
+    // Start slightly blurred and faded
     gsap.fromTo(
       containerRef.current,
-      { opacity: 0, filter: "blur(0px)" },
-      { opacity: 1, filter: "blur(0px)", duration: 0.8, ease: "power2.out" }
+      { opacity: 0, filter: "blur(10px)" },
+      {
+        opacity: 1,
+        filter: "blur(0px)",
+        duration: 1,
+        ease: "power2.out",
+        clearProps: "filter",
+      }
     );
   }, [pathname]);
 
+  // Handle page leave animation
   useEffect(() => {
     const handleLinkClick = (event: MouseEvent) => {
       const link = (event.target as HTMLElement).closest("a");
@@ -33,21 +41,20 @@ export default function PageTransitionProvider({
       const href = link.getAttribute("href");
       if (!href || href.startsWith("#") || href.startsWith("mailto:")) return;
 
-      // Prevent Next.js from navigating immediately
-      event.preventDefault();
-
-      // Run exit animation on current page
+      event.preventDefault(); // stop immediate nav
       isTransitioning.current = true;
+
+      // Animate the current page blur + fade out
       gsap.to(containerRef.current, {
         opacity: 0,
-        filter: "blur(0px)",
-        duration: 0.6,
+        filter: "blur(10px)",
+        duration: 0.7,
         ease: "power2.inOut",
         onComplete: () => {
-          router.push(href); // Navigate after animation
+          router.push(href); // navigate after animation ends
           setTimeout(() => {
             isTransitioning.current = false;
-          }, 600);
+          }, 700);
         },
       });
     };
@@ -56,5 +63,14 @@ export default function PageTransitionProvider({
     return () => document.removeEventListener("click", handleLinkClick);
   }, [router]);
 
-  return <div ref={containerRef}>{children}</div>;
+  return (
+    <div
+      ref={containerRef}
+      style={{
+        overflow: "hidden",
+      }}
+    >
+      {children}
+    </div>
+  );
 }
