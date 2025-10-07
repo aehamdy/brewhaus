@@ -40,8 +40,8 @@ export default function RootLayout({
       <body
         className={`${cabinCondensed.variable} ${calistoga.variable} antialiased`}
       >
+        <Header />
         <SmoothScrollProvider>
-          <Header />
           <PageTransition>
             {children}
             <MarqueeText />
