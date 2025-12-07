@@ -6,14 +6,22 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 
+// --- Dynamic route props must match Next.js expectation
 type ProductPageProps = {
-  params: { productSlug: string };
+  params: Record<string, string> | Promise<Record<string, string>>;
 };
+
+// Helper to unwrap params if it's a Promise
+async function resolveParams(params: ProductPageProps["params"]) {
+  return params instanceof Promise ? await params : params;
+}
 
 export async function generateMetadata({
   params,
 }: ProductPageProps): Promise<Metadata> {
-  const { productSlug } = await params;
+  const resolvedParams = await resolveParams(params);
+  const { productSlug } = resolvedParams;
+
   const product = products.find((p) => p.slug === productSlug);
 
   if (!product) {
@@ -29,14 +37,13 @@ export async function generateMetadata({
   };
 }
 
-async function ProductPage({ params }: ProductPageProps) {
-  const { productSlug } = await params;
+export default async function ProductPage({ params }: ProductPageProps) {
+  const resolvedParams = await resolveParams(params);
+  const { productSlug } = resolvedParams;
 
-  const product = products.find((product) => product.slug === productSlug);
+  const product = products.find((p) => p.slug === productSlug);
 
-  if (!product) {
-    return notFound();
-  }
+  if (!product) return notFound();
 
   return (
     <main className="pt-[144px] md:pt-[184px] bg-surface-primary">
@@ -126,5 +133,3 @@ async function ProductPage({ params }: ProductPageProps) {
     </main>
   );
 }
-
-export default ProductPage;
